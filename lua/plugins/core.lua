@@ -36,17 +36,13 @@ return {
             background = "Normal",
           },
         },
-        -- Add executables on the config.lua
-        -- { cmd, keymap, description, direction, size }
-        -- lvim.builtin.terminal.execs = {...} to overwrite
-        -- lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {"gdb", "tg", "GNU Debugger"}
-        -- TODO: pls add mappings in which key and refactor this
       })
     end,
     keys = {
       { "<M-3>", ":3ToggleTerm count=3 direction=float<cr>", desc = "Opens a new float terminal" },
       { "<M-2>", ":2ToggleTerm count=2 direction=vertical size=50<cr>", desc = "Opens vertical terminal" },
       { "<M-1>", ":1ToggleTerm count=1 direction=horizontal<cr>", desc = "Opens horizontal terminal" },
+      { "<leader>rs", '<cmd>:3TermExec cmd="python %"<CR>', desc = "Run python script" },
     },
   },
 }
