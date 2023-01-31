@@ -10,8 +10,3 @@ vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 vim.keymap.set("t", "<M-3>", [[<C-\><C-n>:3ToggleTerm <CR>]], opts)
 vim.keymap.set("t", "<M-2>", [[<C-\><C-n>:2ToggleTerm <CR>]], opts)
 vim.keymap.set("t", "<M-1>", [[<C-\><C-n>:1ToggleTerm <CR>]], opts)
--- local Terminal = require("toggleterm.terminal").Terminal
--- local python_term = Terminal:new({ cmd = "python", hidden = true })
--- function _python_run()
---   python_term:open()
--- end
